@@ -1,14 +1,11 @@
 import Cabecalho from "../components/cabecalho/cabecalho";
 import Rodape from "../components/rodape/rodape";
-import { Outlet } from "react-router-dom";
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <>
       <Cabecalho />
-      <main>
-        <Outlet />
-      </main>
+      <main>{children}</main>
       <Rodape />
     </>
   );
